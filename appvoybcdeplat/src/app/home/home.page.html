@@ -1,60 +1,53 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="light">
+    <ion-title style="display: flex; align-items: center; gap: 10px;">
+      <img src="https://www.cet30.edu.ar/assets/logo.png" alt="Logo CET 30" width="35" height="35">
+      <span style="font-size: 16px; font-weight: bold;">CET Nº30</span>
     </ion-title>
+    <!-- Icono de perfil a la derecha -->
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person-circle-outline" style="font-size: 32px;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="ion-padding" style="--background: #ffffff;">
+  
+  <!-- Encabezado con fecha y logo chico arriba como en el mockup -->
+  <div class="header-fecha">
+    <div class="logo-mini">
+      <img src="https://www.cet30.edu.ar/assets/logo.png" alt="Logo" width="25">
+      <span>CET N°30</span>
+    </div>
+    <div class="fecha-texto">22 - 06 - 26</div>
+    <div class="avatar-icono">
+      <ion-icon name="person-circle" style="font-size: 38px; color: #000;"></ion-icon>
+    </div>
   </div>
 
-  <!--carta de menu del dia -->
-   <p id="menus">MENU DE HOY</p>
-  <ion-card id="cartasmenu">
-    <img alt="Silhouette of mountains" src="https://recetassinsecretos.com/wp-content/uploads/2023/04/image-271-1024x591.png" width="450px" height="250px" />
-  <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-  </ion-card-header>
-  
-  <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
-  </ion-card-content>
+  <!-- MENÚ DEL DÍA -->
+  <div class="badge-titulo">MENÚ DEL DÍA</div>
+  <ion-card class="comida-card">
+    <img alt="Menú del día" src="https://recetassinsecretos.com/wp-content/uploads/2023/04/image-271-1024x591.png" />
   </ion-card>
 
-  <!--carta de menu de mañana-->
-  <p id="menus">MENU DE MAÑANA</p>
-   <ion-card id="cartasmenu">
-    <img alt="Silhouette of mountains" src="https://imag.bonviveur.com/presentacion-principal-del-pastel-de-carne-murciano.jpg" width="450px" height="250px" />
-  <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-  </ion-card-header>
-  
-  <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
-  </ion-card-content>
+  <!-- MENÚ DE MAÑANA -->
+  <div class="badge-titulo" style="margin-top: 25px;">MENÚ DE MAÑANA</div>
+  <ion-card class="comida-card">
+    <img alt="Menú de mañana" src="https://recetassinsecretos.com/wp-content/uploads/2023/04/image-271-1024x591.png" />
   </ion-card>
 
-  <!--carta informativa-->
-   <p id="menus">RECORDAR!</p>
+  <!-- RECORDATORIO -->
+  <div class="recordatorio-box">
+    <strong>RECORDAR!</strong>
+    <p style="margin: 5px 0 0 0;">Traer al comedor:</p>
+    <ul>
+      <li>Plato</li>
+      <li>Cubiertos</li>
+      <li>Vaso</li>
+    </ul>
+  </div>
 
-   <ion-card id="cartasmenu">
-  <ion-card-header>
-    <p><strong>TRAER AL COMEDOR:</strong></p>
-    <p>-PLATO</p>
-    <p>-CUBIERTOS</p>
-    <p>-VASO</p>
-  </ion-card-header>
-</ion-card>
 </ion-content>
