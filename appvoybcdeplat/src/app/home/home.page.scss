@@ -17,15 +17,16 @@ ion-content {
     gap: 5px;
     font-size: 11px;
     font-weight: bold;
-    border: 1px solid #ccc;
+   
     padding: 2px 6px;
-    border-radius: 4px;
+    // border-radius: 4px;
   }
 
   .fecha-texto {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
+    color: #000000;
   }
 }
 
@@ -59,7 +60,7 @@ ion-content {
 
 // Caja de recordatorios gris claro
 .recordatorio-box {
-  background-color: #eef0f2;
+  background-color: #0c1e30;
   border-radius: 10px;
   padding: 12px 15px;
   margin-top: 25px;
