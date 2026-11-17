@@ -1,16 +1,24 @@
-
-
 <ion-content [fullscreen]="true" class="ion-padding" style="--background: #ffffff;">
-  
-  <!-- Encabezado con fecha y logo chico arriba como en el mockup -->
+
+  <!-- Encabezado con fecha y logo chico arriba -->
   <div class="header-fecha">
     <div class="logo-mini">
-      <img src="https://www.cet30.edu.ar/assets/logo.png" alt="Logo" width="25">
+      <img src="assets/cet.30.logo.webp" alt="Logo" width="45">
       <span>CET N°30</span>
     </div>
     <div class="fecha-texto">22 - 06 - 26</div>
+
+    <!-- Un solo botón de perfil con su desplegable -->
     <div class="avatar-icono">
-      <ion-icon name="person-circle" style="font-size: 38px; color: #000;"></ion-icon>
+      <button class="avatar-btn" type="button" (click)="toggleMenu()">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Foto de perfil" />
+      </button>
+
+      <div class="dropdown-perfil" *ngIf="menuAbierto">
+        <button type="button" class="dropdown-item" (click)="cerrarSesion()">
+          Cerrar sesión
+        </button>
+      </div>
     </div>
   </div>
 
@@ -23,13 +31,13 @@
   <!-- MENÚ DE MAÑANA -->
   <div class="badge-titulo" style="margin-top: 25px;">MENÚ DE MAÑANA</div>
   <ion-card class="comida-card">
-    <img alt="Menú de mañana" src="https://recetassinsecretos.com/wp-content/uploads/2023/04/image-271-1024x591.png" />
+    <img alt="Menú de mañana" src="https://www.machupicchuterra.com/wp-content/uploads/pastel-papa-full.jpg" />
   </ion-card>
 
   <!-- RECORDATORIO -->
   <div class="recordatorio-box">
     <strong>RECORDAR!</strong>
-    <p style="margin: 5px 0 0 0;">Traer al comedor:</p>
+    <p style="margin: 5px 0 0;">Traer al comedor:</p>
     <ul>
       <li>Plato</li>
       <li>Cubiertos</li>

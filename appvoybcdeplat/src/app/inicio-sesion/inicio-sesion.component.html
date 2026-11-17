@@ -3,7 +3,7 @@
     <div class="login-card">
       <!-- Logo centrado en la parte superior -->
       <div class="logo-container">
-        <img src="assets\cet.30.logo.webp" alt="Logo Colegio Técnico CET N° 30" />
+        <img src="assets/cet.30.logo.webp" alt="Logo Colegio Técnico CET N° 30" />
       </div>
 
       <h1 class="login-title">Iniciar Sesión</h1>
@@ -12,8 +12,10 @@
         <label class="input-label">Usuario o Correo</label>
         <ion-input
           class="custom-input"
-          type="email"
-          placeholder="Ingresa tu correo">
+          type="text"
+          [value]="usuario"
+          (ionInput)="usuario = $event.target.value"
+          placeholder="Ingresa tu usuario">
         </ion-input>
       </div>
 
@@ -22,13 +24,25 @@
         <ion-input
           class="custom-input"
           type="password"
+          [value]="password"
+          (ionInput)="password = $event.target.value"
+          (keyup.enter)="iniciarSesion()"
           placeholder="••••••••••">
         </ion-input>
       </div>
 
-      <ion-button expand="block" shape="round" class="login-button">
+      <!-- Mensaje de error si las credenciales no coinciden -->
+      <p class="error-text" *ngIf="mensajeError">{{ mensajeError }}</p>
+
+      <ion-button expand="block" shape="round" class="login-button" (click)="iniciarSesion()">
         INGRESAR
       </ion-button>
+
+      <!-- Enlace hacia Registro -->
+      <div class="register-link">
+        <span>¿No tienes cuenta?</span>
+        <a routerLink="/registro">Regístrate aquí</a>
+      </div>
     </div>
   </div>
-</ion-content>
+</ion-content>  
